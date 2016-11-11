@@ -1,0 +1,12 @@
+ges_gfct_homepage:
+    path:     /index
+    defaults: { _controller: gesGfctBundle:Default:index }
+all_empresa:
+    path:     /empresa/all
+    defaults: { _controller: gesGfctBundle:empresa:all }
+new_empresa:
+    path:     /empresa/new
+    defaults: { _controller: gesGfctBundle:empresa:newEmpresa }
+exito_empresa:
+    path:     /empresa/msgExito
+    defaults: { _controller: gesGfctBundle:empresa:msgExito }

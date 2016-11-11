@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+	<title>{% block tiitle %}GFCT{% endblock %}</title>
+  {% block stylesheets %}
+   <link rel="stylesheet" type="text/css" href="{{asset('css/estilos.css')}}">
+   {% endblock %}
+</head>
+<body>
+  {% block body %}<h1>GFCT</h1><br>
+    <div>
+      <table class="tabla">
+        <tr>
+          <th><b>id</b></th>
+          <th><b>nombre</b></th>
+          <th><b>direccion</b></th>
+          <th><b>codigopostal</b></th>
+          <th><b>telefono1</b></th>
+          <th><b>telefono2</b></th>
+          <th><b>fechaCreacion</b></th>
+
+        </tr>
+        {% for empresa1 in NumEmpresas %}
+        <tr>
+          <th>{{ empresa1.id}}</th>
+          <th>{{ empresa1.nombre }}</th>
+          <th>{{ empresa1.direccion }}</th>
+          <th>{{ empresa1.cp }}</th>
+          <th>{{ empresa1.telefono1 }}</th>
+          <th>{{ empresa1.telefono2 }}</th>
+
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+    {% endblock %}
+
+</body>
+</html>
