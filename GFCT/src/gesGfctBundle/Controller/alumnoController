@@ -1,0 +1,10 @@
+<?php
+
+namespace gesGfctBundle\Controller;
+
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use gesGfctBundle\Form\empresaType;
+use gesGfctBundle\Entity\empresa;
+use gesGfctBundle\Entity\alumno;
+
+use Symfony\Component\HttpFoundation\Request;

@@ -5,6 +5,7 @@ namespace gesGfctBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use gesGfctBundle\Form\empresaType;
 use gesGfctBundle\Entity\empresa;
+use gesGfctBundle\Entity\alumno;
 use Symfony\Component\HttpFoundation\Request;
 
 class empresaController extends Controller
@@ -41,4 +42,32 @@ class empresaController extends Controller
         return $this->render('gesGfctBundle:Empresa:msgExito.html.twig');
 
     }
+    public function newAlumnosAction()
+    {
+      /*
+      $NuevaEmpresa=new empresa();
+      $NuevaEmpresa->setNombre("Empresa29");
+      $NuevaEmpresa->setDireccion("calle cervantes");
+      $NuevaEmpresa->setCp("353462");
+      $NuevaEmpresa->setTelefono1("3154164");
+      $NuevaEmpresa->setTelefono2("16432462");
+      $NuevaEmpresa->setFechaCreacion(new \DateTime());
+
+      $alumnos=new alumno();
+      $alumnos->setNombre("Pepe");
+      $alumnos->setCiclo("DAW");
+      $alumnos->setApellido1("juan");
+      $alumnos->setApellido2("juanete");
+
+      $alumnos->setEmpresaAlumnos($NuevaEmpresa);
+
+      $nuevaEm=$this->getDoctrine()->getManager();
+      $nuevaEm->persist($NuevaEmpresa);
+      $nuevaEm->persist($alumnos);
+      $nuevaEm->flush();
+
+        return $this->redirectToRoute('all_empresa');
+*/
+    }
+
 }

@@ -221,45 +221,4 @@ class empresa
     {
         return $this->fechaCreacion;
     }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->alumnosEmp = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-
-    /**
-     * Add alumnosEmp
-     *
-     * @param \gesGfctBundle\Entity\alumno $alumnosEmp
-     *
-     * @return empresa
-     */
-    public function addAlumnosEmp(\gesGfctBundle\Entity\alumno $alumnosEmp)
-    {
-        $this->alumnosEmp[] = $alumnosEmp;
-
-        return $this;
-    }
-
-    /**
-     * Remove alumnosEmp
-     *
-     * @param \gesGfctBundle\Entity\alumno $alumnosEmp
-     */
-    public function removeAlumnosEmp(\gesGfctBundle\Entity\alumno $alumnosEmp)
-    {
-        $this->alumnosEmp->removeElement($alumnosEmp);
-    }
-
-    /**
-     * Get alumnosEmp
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getAlumnosEmp()
-    {
-        return $this->alumnosEmp;
-    }
 }

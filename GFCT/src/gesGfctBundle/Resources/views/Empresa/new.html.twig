@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Formulario New</title>
-    <h1>Formulario, Insertar datos</h1>
-
-    {% block stylesheets %}
-     <link rel="stylesheet" type="text/css" href="{{asset('css/estilosForm.css')}}">
-     {% endblock %}
-  </head>
-  <body>
+{% extends '::base.html.twig' %}
+{% block body %}
     <div class="contenedor">
+      <h1>GFCT</h1><br>
     {{form(formulario)}}
     </div>
-  </body>
-</html>
+    {% endblock %}

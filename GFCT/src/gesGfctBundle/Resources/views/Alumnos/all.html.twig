@@ -1,0 +1,32 @@
+{% extends '::base.html.twig' %}
+  {% block body %}<h1>GFCT</h1><br>
+    <div>  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Toos los campos de la tabla Alumnos + el id de la empresa</div>
+
+    <!-- Table -->
+    <table class="table">
+        <tr>
+          <th><b>id</b></th>
+          <th><b>nombre</b></th>
+          <th><b>apellido1</b></th>
+          <th><b>apellido2</b></th>
+          <th><b>ciclo</b></th>
+          <th><b>EmpresaId</b></th>
+
+        </tr>
+        {% for alumno1 in NumAlumno %}
+        <tr>
+          <th>{{ alumno1.id}}</th>
+          <th>{{ alumno1.nombre }}</th>
+          <th>{{ alumno1.apellido1 }}</th>
+          <th>{{ alumno1.apellido2 }}</th>
+          <th>{{ alumno1.ciclo }}</th>
+          <th>{{ alumno1.empresaAlumnos.id }}</th>
+
+        </tr>
+        {% endfor %}
+      </table>
+      </div>
+      </div>
+          {% endblock %}

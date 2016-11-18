@@ -2,12 +2,49 @@
 <html>
     <head>
         <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        {% block stylesheets %}
+        <link href="{{asset('css/css/bootstrap.min.css')}}"rel="stylesheet">
+        <link href="{{asset('css/css/simple-sidebar.css')}}" rel="stylesheet">
+        <link href="{{asset('css/css/bootstrap.css')}}" rel="stylesheet">
+
+
+        <link href="{{asset('js/bootstrap.js')}}" rel="stylesheet">
+        <link href="{{asset('js/bootstrap.min.js')}}" rel="stylesheet">
+        <link href="{{asset('js/jquery.js')}}" rel="stylesheet">
+        {% endblock %}
     </head>
+
     <body>
-        {% block body %}{% endblock %}
+
+            <div id="wrapper">
+
+                <!-- Sidebar -->
+                <div id="sidebar-wrapper">
+                    <ul class="sidebar-nav">
+                        <li class="sidebar-brand">
+                            <a href="{{asset('/empresa')}}">
+                                Json BDA
+                            </a>
+                        </li>
+                        <li>
+
+                            <a href="{{asset('/empresa/all')}}">Campos empresa</a>
+                        </li>
+                        <li>
+                            <a href="{{asset('/alumno/all')}}">Alumnos + idEmpresa</a>
+                        </li>
+                        <li>
+                            <a href="{{asset('/empresa/new')}}">Nueva Empresa</a>
+                        </li>
+
+                    </ul>
+                </div>
+              {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
 </html>

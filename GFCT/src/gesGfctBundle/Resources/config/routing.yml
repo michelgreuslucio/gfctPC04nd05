@@ -7,6 +7,13 @@ all_empresa:
 new_empresa:
     path:     /empresa/new
     defaults: { _controller: gesGfctBundle:empresa:newEmpresa }
+all_empresaAlumno:
+    path:     /alumno/all
+    defaults: { _controller: gesGfctBundle:alumno:all }
 exito_empresa:
     path:     /empresa/msgExito
     defaults: { _controller: gesGfctBundle:empresa:msgExito }
+api_empresa:
+    path: /empresa
+    defaults: { _controller: gesGfctBundle:api:empresas }
+    methods:  [GET]
